@@ -1,0 +1,16 @@
+// Keep this file as it is, apart from `name` before the first deploy (see the README). Updates
+// only change the version of `@sveltia/cms-additions` in `package.json`; a release that needs a
+// change here says so in its notes.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sveltia-cms-additions",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "minify": true,
+  "preview_urls": false,
+  "durable_objects": {
+    "bindings": [{ "name": "DURABLE_OBJECT", "class_name": "AdditionsDurableObject" }],
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["AdditionsDurableObject"] }],
+}

@@ -1,0 +1,11 @@
+# Proposes each new release of Sveltia CMS Additions as a pull request. Merging it deploys the update
+# through Workers Builds. Nothing is updated without review. See the README.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    allow:
+      - dependency-name: '@sveltia/cms-additions'
+      - dependency-name: wrangler

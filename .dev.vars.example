@@ -1,0 +1,4 @@
+# The only variable of Sveltia CMS Additions. The Deploy to Cloudflare button reads this file to ask
+# for it, and stores it as a secret of the Worker. Generate it with `openssl rand -base64 32` and keep
+# it in a password manager; don’t write the real value in this file or in a `.dev.vars`.
+ADMIN_SECRET=
